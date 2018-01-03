@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebMarket.EF.Entities
 {
-    class ProductCharacteristicEntity
+    public class ProductCharacteristicEntity
     {
         public int CharacteristicId { get; set; }
 

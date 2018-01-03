@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebMarket.EF.Entities
 {
-    class SubCategoryEntity
+    public class SubCategoryEntity
     {
         public int SubCategoryId { get; set; }
 
