@@ -13,7 +13,7 @@ namespace WebMarket.WebAPI.Controllers
         [HttpGet]
         public string Get()
         {
-            return "It`s working";
+            return "It`s working fine";
         }
 
         // GET api/values/5
