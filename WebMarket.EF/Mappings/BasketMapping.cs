@@ -6,7 +6,7 @@ namespace WebMarket.EF.Mappings
 {
     public class BasketMapping
     {
-        public BasketMapping(EntityTypeBuilder<BasketEntity> builder)
+        public static void Configure(EntityTypeBuilder<BasketEntity> builder)
         {
             builder.ToTable("Basket");
 

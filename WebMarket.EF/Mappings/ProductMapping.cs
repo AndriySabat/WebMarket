@@ -6,8 +6,7 @@ namespace WebMarket.EF.Mappings
 {
     public class ProductMapping
     {
-        
-        public ProductMapping(EntityTypeBuilder<ProductEntity> builder)
+        public static void Configure(EntityTypeBuilder<ProductEntity> builder)
         {
             builder.ToTable("Products");
             

@@ -6,7 +6,7 @@ namespace WebMarket.EF.Mappings
 {
     public class UserMapping
     {
-        public UserMapping(EntityTypeBuilder<UserEntity> builder)
+        public static void Configure(EntityTypeBuilder<UserEntity> builder)
         {
             builder.ToTable("Users");
 

@@ -6,7 +6,7 @@ namespace WebMarket.EF.Mappings
 {
     public class CategoryMapping
     {
-        public CategoryMapping(EntityTypeBuilder<CategoryEntity> builder)
+        public static void Configure(EntityTypeBuilder<CategoryEntity> builder)
         {
             builder.ToTable("Categories");
 

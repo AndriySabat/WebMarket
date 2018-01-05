@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using WebMarket.EF.Entities;
 
 namespace WebMarket.EF.Entities
 {
@@ -11,5 +9,7 @@ namespace WebMarket.EF.Entities
         public int ProductId { get; set; }
 
         public string Description { get; set; }
+
+        public virtual ProductEntity Product { get; set; }
     }
 }

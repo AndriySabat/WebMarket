@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace WebMarket.EF.Entities
 {
@@ -19,5 +17,7 @@ namespace WebMarket.EF.Entities
         public double Discount { get; set; }
 
         public string ManufacturedCountry { get; set; }
+
+        public virtual ICollection<ProductCharacteristicEntity> Characteristics { get; set; }
     }
 }

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using WebMarket.EF.Entities;
 
 namespace WebMarket.EF.Entities
 {
     public class UserEntity
     {
-        public string UserId { get; set; }
+        public long UserId { get; set; }
 
         public string FirstName { get; set; }
 
@@ -17,5 +16,7 @@ namespace WebMarket.EF.Entities
         public string Email { get; set; }
 
         public string PhoneNumber { get; set; }
+
+        public virtual ICollection<BasketEntity> ProductsInBasket { get; set; }
     }
 }
