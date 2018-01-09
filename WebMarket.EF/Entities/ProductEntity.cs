@@ -4,6 +4,11 @@ namespace WebMarket.EF.Entities
 {
     public class ProductEntity
     {
+        public ProductEntity()
+        {
+            Characteristics = new List<ProductCharacteristicEntity>();
+            Baskets = new List<BasketEntity>();
+        }
         public int ProductId { get; set; }
 
         public string ProductCode { get; set; }
@@ -19,5 +24,7 @@ namespace WebMarket.EF.Entities
         public string ManufacturedCountry { get; set; }
 
         public virtual ICollection<ProductCharacteristicEntity> Characteristics { get; set; }
+
+        public virtual ICollection<BasketEntity> Baskets { get; set; }
     }
 }

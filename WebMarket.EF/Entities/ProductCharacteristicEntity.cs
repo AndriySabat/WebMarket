@@ -1,6 +1,4 @@
-﻿using WebMarket.EF.Entities;
-
-namespace WebMarket.EF.Entities
+﻿namespace WebMarket.EF.Entities
 {
     public class ProductCharacteristicEntity
     {
@@ -10,6 +8,6 @@ namespace WebMarket.EF.Entities
 
         public string Description { get; set; }
 
-        public virtual ProductEntity Product { get; set; }
+        //public virtual ProductEntity Product { get; set; }
     }
 }

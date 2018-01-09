@@ -18,6 +18,11 @@ namespace WebMarket.EF.Mappings
             builder.Property(p => p.Description).HasColumnName("Description").IsRequired(false);
 
             builder.HasKey(p => p.ProductId);
+
+            //TODO: need check for composite primary key
+            builder.HasMany(p => p.Baskets)
+                .WithOne(b => b.Product)
+                .HasForeignKey(p => p.ProductId);
         }
     }
 }

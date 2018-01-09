@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
-using WebMarket.EF.Entities;
 
 namespace WebMarket.EF.Entities
 {
     public class UserEntity
     {
+        public UserEntity()
+        {
+            ProductsInBasket = new List<BasketEntity>();
+        }
+
         public long UserId { get; set; }
 
         public string FirstName { get; set; }

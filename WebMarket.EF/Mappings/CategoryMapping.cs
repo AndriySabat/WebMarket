@@ -14,6 +14,10 @@ namespace WebMarket.EF.Mappings
             builder.Property(c => c.Description).HasColumnName("Description");
 
             builder.HasKey(c => c.CategortId);
+
+            builder.HasMany(c => c.SubCategories)
+                .WithOne(s => s.Category)
+                .HasForeignKey(s => s.CategoryId);
         }
     }
 }

@@ -16,6 +16,14 @@ namespace WebMarket.EF.Mappings
             builder.Property(b => b.CreatedAt).IsRequired().ValueGeneratedOnAdd();
 
             builder.HasKey(b => new { b.ProductId, b.UserId });
+
+            builder.HasOne(b => b.User)
+                .WithMany(u => u.ProductsInBasket)
+                .HasForeignKey(b => b.UserId);
+
+            builder.HasOne(b => b.Product)
+                .WithMany(p => p.Baskets)
+                .HasForeignKey(b => b.ProductId);
         }
     }
 }

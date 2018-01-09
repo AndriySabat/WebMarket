@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using WebMarket.EF.Entities;
 
 namespace WebMarket.EF.Entities
 {

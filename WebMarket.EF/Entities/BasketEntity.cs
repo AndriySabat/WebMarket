@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using WebMarket.EF.Entities;
 
 namespace WebMarket.EF.Entities
 {
@@ -13,5 +12,9 @@ namespace WebMarket.EF.Entities
         public DateTime CreatedAt { get; set; }
 
         public int Count { get; set; }
+
+        public virtual UserEntity User { get; set; }
+
+        public virtual ProductEntity Product { get; set; }
     }
 }

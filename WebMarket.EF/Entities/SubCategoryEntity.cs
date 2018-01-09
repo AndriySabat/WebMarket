@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using WebMarket.EF.Entities;
-
-namespace WebMarket.EF.Entities
+﻿namespace WebMarket.EF.Entities
 {
     public class SubCategoryEntity
     {
@@ -12,5 +9,6 @@ namespace WebMarket.EF.Entities
         public string Description { get; set; }
 
         public virtual CategoryEntity Category { get; set; }
+
     }
 }

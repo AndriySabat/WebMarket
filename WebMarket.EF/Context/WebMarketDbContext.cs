@@ -9,7 +9,12 @@ namespace WebMarket.EF.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Entity<ProductEntity>(ProductMapping.Configure);
+            modelBuilder.Entity<UserEntity>(UserMapping.Configure);
+            modelBuilder.Entity<SubCategoryEntity>(SubCategoryMapping.Configure);
+            modelBuilder.Entity<CategoryEntity>(CategoryMapping.Configure);
+            modelBuilder.Entity<ProductCharacteristicEntity>(ProductCharacteristicMapping.Configure);
+            modelBuilder.Entity<BasketEntity>(BasketMapping.Configure);
         }
 
         public DbSet<ProductEntity> Products { get; set; }
