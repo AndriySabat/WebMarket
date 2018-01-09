@@ -16,4 +16,10 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebMarket.BL\WebMarket.BL.csproj" />
+    <ProjectReference Include="..\WebMarket.DTO\WebMarket.DTO.csproj" />
+    <ProjectReference Include="..\WebMarket.EF\WebMarket.EF.csproj" />
+  </ItemGroup>
+
 </Project>
