@@ -22,16 +22,7 @@ namespace WebMarket.WebAPI.Controllers
         [HttpGet]
         public string Get()
         {
-            
-            var product = new ProductEntity
-            {
-                ProductName = "name",
-                ProductCode = "1",
-                Price = 12
-            };
-            context.Products.Add(product);
-            context.SaveChanges();
-            return "It`s working";
+            return "It`s working fine";
         }
 
         // GET api/values/5
