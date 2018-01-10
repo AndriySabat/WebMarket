@@ -6,6 +6,14 @@ namespace WebMarket.EF.Context
 {
     public class WebMarketDbContext : DbContext
     {
+        public WebMarketDbContext()
+        {
+        }
+
+        public WebMarketDbContext(DbContextOptions<WebMarketDbContext> options)
+            : base(options)
+        {
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

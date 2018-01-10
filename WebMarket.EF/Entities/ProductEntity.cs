@@ -9,7 +9,7 @@ namespace WebMarket.EF.Entities
             Characteristics = new List<ProductCharacteristicEntity>();
             Baskets = new List<BasketEntity>();
         }
-        public int ProductId { get; set; }
+        public long ProductId { get; set; }
 
         public string ProductCode { get; set; }
 
@@ -19,7 +19,7 @@ namespace WebMarket.EF.Entities
 
         public double Price { get; set; }
 
-        public double Discount { get; set; }
+        public double? Discount { get; set; }
 
         public string ManufacturedCountry { get; set; }
 

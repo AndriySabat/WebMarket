@@ -4,7 +4,7 @@ namespace WebMarket.EF.Entities
 {
     public class CategoryEntity
     {
-        public int CategortId { get; set; }
+        public long CategortId { get; set; }
 
         public string Description { get; set; }
 
