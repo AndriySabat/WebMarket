@@ -25,6 +25,11 @@ namespace WebMarket.EF.Context
             modelBuilder.Entity<BasketEntity>(BasketMapping.Configure);
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(ConnectionStringGetter.ConnectionString);
+        }
+
         public DbSet<ProductEntity> Products { get; set; }
 
         public DbSet<UserEntity> Users { get; set; }

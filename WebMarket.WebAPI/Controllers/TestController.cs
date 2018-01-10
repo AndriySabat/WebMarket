@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebMarket.EF.Context;
 using WebMarket.EF.Entities;
+using WebMarket.DAL.Providers;
 
 namespace WebMarket.WebAPI.Controllers
 {
@@ -13,16 +14,19 @@ namespace WebMarket.WebAPI.Controllers
     {
         private WebMarketDbContext context;
 
-        public TestController(WebMarketDbContext context_)
+        private IProductProvider provider;
+
+        public TestController(WebMarketDbContext context_, IProductProvider provider_)
         {
             this.context = context_;
+            this.provider = provider_;
         }
 
         // GET api/values
         [HttpGet]
-        public string Get()
+        public async Task<List<ProductEntity>> Get()
         {
-            return "It`s working fine";
+            return await provider.GetAllProducts();
         }
 
         // GET api/values/5

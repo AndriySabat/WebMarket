@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMarket.WebAPI", "WebMarket.WebAPI\WebMarket.WebAPI.csproj", "{DC7D9E1F-0ED1-4C7A-8F78-3B71124EBFE3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMarket.Web", "WebMarket.Web\WebMarket.Web.csproj", "{0086AEEE-285C-4DB8-84FE-0F97D0D8228C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMarket.BL", "WebMarket.BL\WebMarket.BL.csproj", "{6C3266F6-6E1F-4E55-9C63-1AA41FAE913D}"
 EndProject
@@ -14,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMarket.DTO", "WebMarket.DTO\WebMarket.DTO.csproj", "{5E609332-27EB-4AF0-B91B-084F86553DAD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMarket.Angular", "WebMarket.Angular\WebMarket.Angular.csproj", "{C379481B-2208-40F5-9370-1BF6341DC746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMarket.DAL", "WebMarket.DAL\WebMarket.DAL.csproj", "{E2B006FE-0AE1-447A-8894-1BC7FDB4CD00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{DC7D9E1F-0ED1-4C7A-8F78-3B71124EBFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC7D9E1F-0ED1-4C7A-8F78-3B71124EBFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC7D9E1F-0ED1-4C7A-8F78-3B71124EBFE3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0086AEEE-285C-4DB8-84FE-0F97D0D8228C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0086AEEE-285C-4DB8-84FE-0F97D0D8228C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0086AEEE-285C-4DB8-84FE-0F97D0D8228C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0086AEEE-285C-4DB8-84FE-0F97D0D8228C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C3266F6-6E1F-4E55-9C63-1AA41FAE913D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C3266F6-6E1F-4E55-9C63-1AA41FAE913D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C3266F6-6E1F-4E55-9C63-1AA41FAE913D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{C379481B-2208-40F5-9370-1BF6341DC746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C379481B-2208-40F5-9370-1BF6341DC746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C379481B-2208-40F5-9370-1BF6341DC746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B006FE-0AE1-447A-8894-1BC7FDB4CD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B006FE-0AE1-447A-8894-1BC7FDB4CD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B006FE-0AE1-447A-8894-1BC7FDB4CD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B006FE-0AE1-447A-8894-1BC7FDB4CD00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
