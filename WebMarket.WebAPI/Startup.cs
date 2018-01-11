@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebMarket.EF.Context;
 using Microsoft.EntityFrameworkCore;
+using WebMarket.DAL.Common;
+using WebMarket.EF;
 
 namespace WebMarket.WebAPI
 {
@@ -32,6 +34,9 @@ namespace WebMarket.WebAPI
         {
             services.AddDbContext<WebMarketDbContext>(option =>
                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            ConnectionStringGetter.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
+            var DALDC = new DALDependencyConfigurator();
+            DALDC.Configure(services);
             services.AddMvc();
         }
 
