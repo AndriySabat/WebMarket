@@ -23,10 +23,15 @@ namespace WebMarket.WebAPI.Controllers
         }
 
         // GET api/values
+        //[HttpGet]
+        //public async Task<List<ProductEntity>> Get()
+        //{
+        //    return await provider.GetAllProducts();
+        //}
         [HttpGet]
-        public async Task<List<ProductEntity>> Get()
+        public async Task<string> Get()
         {
-            return await provider.GetAllProducts();
+            return await Task.Run(() => { return "test string"; });
         }
 
         // GET api/values/5

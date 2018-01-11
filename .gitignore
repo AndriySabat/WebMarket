@@ -260,3 +260,7 @@ paket-files/
 __pycache__/
 *.pyc
 /WebMarket.EF/Migrations
+/WebMarket.Web/ClientApp/app/app.component.js.map
+/WebMarket.Web/ClientApp/app/app.module.js.map
+*.map
+/WebMarket.Web/wwwroot/dist
