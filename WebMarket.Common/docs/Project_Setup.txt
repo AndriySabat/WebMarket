@@ -18,6 +18,6 @@
 
 6.Typescript Compiler(tsc) Open cmd and install typescript compiler:   npm install -g typescript
 
-7.run 'src\restore.bat for restoring all dependecies(include node_modules)
+7.run 'WebMarket.Common\restore.bat for restoring all dependecies(include node_modules)
 
 8.go to tools->extensions and updates->online and install GitHub
