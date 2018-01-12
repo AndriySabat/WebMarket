@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebMarket.Common\WebMarket.Common.csproj" />
     <ProjectReference Include="..\WebMarket.EF\WebMarket.EF.csproj" />
   </ItemGroup>
 

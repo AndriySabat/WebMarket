@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WebMarket.Angular\WebMarket.Angular.csproj" />
     <ProjectReference Include="..\WebMarket.BL\WebMarket.BL.csproj" />
+    <ProjectReference Include="..\WebMarket.Common\WebMarket.Common.csproj" />
     <ProjectReference Include="..\WebMarket.DAL\WebMarket.DAL.csproj" />
     <ProjectReference Include="..\WebMarket.DTO\WebMarket.DTO.csproj" />
     <ProjectReference Include="..\WebMarket.EF\WebMarket.EF.csproj" />
