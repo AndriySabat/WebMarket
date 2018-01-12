@@ -1,10 +1,12 @@
 ﻿import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app/app.component';
+import { NavMenuComponent } from './components/navmenu/navmenu.component';
+//import { AppComponent } from './app.component';
 @NgModule({
     imports: [BrowserModule, FormsModule],
-    declarations: [AppComponent],
+    declarations: [AppComponent, NavMenuComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

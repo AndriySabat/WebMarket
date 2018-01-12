@@ -5,16 +5,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { Component } from '@angular/core';
-var AppComponent = /** @class */ (function () {
+var AppComponent = (function () {
     function AppComponent() {
     }
-    AppComponent = __decorate([
-        Component({
-            selector: 'app',
-            template: "<h1>Angural is working</h1>"
-        })
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    Component({
+        selector: 'app',
+        templateUrl: './app.component.html'
+    })
+], AppComponent);
 export { AppComponent };
 //# sourceMappingURL=app.component.js.map
