@@ -2,7 +2,7 @@
 
 @Component({
     selector: 'app',
-    template: `<h1>Angural is working</h1>`
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
 }
