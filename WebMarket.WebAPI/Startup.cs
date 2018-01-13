@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using WebMarket.DAL.Common;
 using WebMarket.EF;
 using WebMarket.Common;
+using WebMarket.Services.Common;
 
 namespace WebMarket.WebAPI
 {
@@ -39,7 +40,8 @@ namespace WebMarket.WebAPI
 
             var config = new List<IDependencyConfigurator>
             {
-                new DALDependencyConfigurator()
+                new DALDependencyConfigurator(),
+                new ServicesDependencyConfigurator()
             };
 
             foreach (var item in config)
