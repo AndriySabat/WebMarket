@@ -12,6 +12,8 @@ using WebMarket.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using WebMarket.DAL.Common;
 using WebMarket.EF;
+using WebMarket.Common;
+using WebMarket.Services.Common;
 
 namespace WebMarket.WebAPI
 {
@@ -35,8 +37,18 @@ namespace WebMarket.WebAPI
             services.AddDbContext<WebMarketDbContext>(option =>
                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             ConnectionStringGetter.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
-            var DALDC = new DALDependencyConfigurator();
-            DALDC.Configure(services);
+
+            var config = new List<IDependencyConfigurator>
+            {
+                new DALDependencyConfigurator(),
+                new ServicesDependencyConfigurator()
+            };
+
+            foreach (var item in config)
+            {
+                item.Configure(services);
+            }
+
             services.AddMvc();
         }
 

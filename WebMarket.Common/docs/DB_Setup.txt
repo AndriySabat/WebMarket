@@ -1,0 +1,14 @@
+﻿for creating DB u need to hardCode your connectionstring into WebMarket.WebApi appsettings.json
+and add your connectionstring like this:
+
+"DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=WebMarket_DB;Trusted_Connection=True;",
+
+after that u need 
+-go to temp -> WebMarket.DbConfig
+
+add same connectionstring to appsetings.json
+
+choose in Package Manager Console WebMarket.DbConfig as default project 
+
+-use script  in Package Manager Console "add-migration Name" (if u have some problems, choose WebMarket.DbConfig as startup project too)
+then "update-database" for creating/updating DB
