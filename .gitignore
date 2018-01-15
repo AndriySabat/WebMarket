@@ -264,3 +264,4 @@ __pycache__/
 /WebMarket.Web/ClientApp/app/app.module.js.map
 *.map
 /WebMarket.Web/wwwroot/dist
+/WebMarket.DbConfig/Migrations
