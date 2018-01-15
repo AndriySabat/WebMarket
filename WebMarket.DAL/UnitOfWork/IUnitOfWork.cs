@@ -15,8 +15,6 @@ namespace WebMarket.DAL.UnitOfWork
 
         IGenericRepository<CategoryEntity> CategoryRepository { get; }
 
-        IGenericRepository<SubCategoryEntity> SubCategoryRepository { get; }
-
         IGenericRepository<ProductCharacteristicEntity> ProductCharacteristicRepository { get; }
 
         /// <summary>

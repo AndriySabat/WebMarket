@@ -4,10 +4,14 @@ namespace WebMarket.EF.Entities
 {
     public class CategoryEntity
     {
-        public long CategortId { get; set; }
+        public long CategoryId { get; set; }
 
         public string Description { get; set; }
+        
+        public long? SubCategoryId { get; set; }
 
-        public virtual ICollection<SubCategoryEntity> SubCategories { get; set; }
+        public virtual ICollection<CategoryEntity> SubCategories { get; set; }
+
+        public virtual CategoryEntity ParentCategory { get; set; }
     }
 }

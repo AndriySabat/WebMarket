@@ -18,8 +18,6 @@ namespace WebMarket.DAL.UnitOfWork
 
         private IGenericRepository<CategoryEntity> categoryRepository;
 
-        private IGenericRepository<SubCategoryEntity> subCategoryRepository;
-
         private IGenericRepository<ProductCharacteristicEntity> productCharacteristicRepository;
 
         public WebMarketUnitOfWork()
@@ -33,8 +31,6 @@ namespace WebMarket.DAL.UnitOfWork
         public IGenericRepository<BasketEntity> BasketRepository => this.basketRepository ?? (this.basketRepository = new GenericRepository<BasketEntity>(context));
 
         public IGenericRepository<CategoryEntity> CategoryRepository => this.categoryRepository ?? (this.categoryRepository = new GenericRepository<CategoryEntity>(context));
-
-        public IGenericRepository<SubCategoryEntity> SubCategoryRepository => this.subCategoryRepository ?? (this.subCategoryRepository = new GenericRepository<SubCategoryEntity>(context));
 
         public IGenericRepository<ProductCharacteristicEntity> ProductCharacteristicRepository => this.productCharacteristicRepository ?? (this.productCharacteristicRepository = new GenericRepository<ProductCharacteristicEntity>(context));
 
@@ -50,7 +46,7 @@ namespace WebMarket.DAL.UnitOfWork
 
         public Task<int> SaveChangesAsync()
         {
-            return this.SaveChangesAsync();
+            return this.context.SaveChangesAsync();
         }
     }
 }

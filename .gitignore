@@ -265,3 +265,4 @@ __pycache__/
 *.map
 /WebMarket.Web/wwwroot/dist
 /WebMarket.DbConfig/Migrations
+/WebMarket.Angular/Properties/launchSettings.json

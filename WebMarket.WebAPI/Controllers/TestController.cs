@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebMarket.EF.Context;
 using WebMarket.EF.Entities;
 using WebMarket.DAL.Providers;
+using WebMarket.DTO;
 
 namespace WebMarket.WebAPI.Controllers
 {
@@ -15,11 +16,13 @@ namespace WebMarket.WebAPI.Controllers
         private WebMarketDbContext context;
 
         private IProductProvider provider;
+        private ICategoryProvider categoryProvider;
 
-        public TestController(WebMarketDbContext context_, IProductProvider provider_)
+        public TestController(WebMarketDbContext context_, IProductProvider provider_, ICategoryProvider categoryProvider_)
         {
             this.context = context_;
             this.provider = provider_;
+            this.categoryProvider = categoryProvider_;
         }
 
         // GET api/values
@@ -29,9 +32,22 @@ namespace WebMarket.WebAPI.Controllers
         //    return await provider.GetAllProducts();
         //}
         [HttpGet]
-        public async Task<string> Get()
+        public async Task<List<Category>> Get()
         {
-            return await Task.Run(() => { return "test string"; });
+            var category = new CategoryEntity
+            {
+                Description = "category_1",
+                SubCategories = new List<CategoryEntity>()
+                {
+                    new CategoryEntity
+                    {
+                        Description = "SubCategory_1"
+                    }
+                }
+            };
+            //var i = await categoryProvider.Add(category);
+            var list =  await categoryProvider.GetAll();
+            return list;
         }
 
         // GET api/values/5

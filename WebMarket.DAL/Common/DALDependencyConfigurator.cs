@@ -18,6 +18,7 @@ namespace WebMarket.DAL.Common
         public void Configure(IServiceCollection services)
         {
             services.AddTransient<IProductProvider, ProductProvider>();
+            services.AddTransient<ICategoryProvider, CategoryProvider>();
 
             services.AddTransient<IUnitOfWork, WebMarketUnitOfWork>();
             services.AddTransient<IUnitOfWorkFactory, UnitOfWorkFactory>();

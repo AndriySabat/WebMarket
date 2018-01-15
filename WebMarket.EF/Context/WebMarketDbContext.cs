@@ -19,7 +19,6 @@ namespace WebMarket.EF.Context
         {
             modelBuilder.Entity<ProductEntity>(ProductMapping.Configure);
             modelBuilder.Entity<UserEntity>(UserMapping.Configure);
-            modelBuilder.Entity<SubCategoryEntity>(SubCategoryMapping.Configure);
             modelBuilder.Entity<CategoryEntity>(CategoryMapping.Configure);
             modelBuilder.Entity<ProductCharacteristicEntity>(ProductCharacteristicMapping.Configure);
             modelBuilder.Entity<BasketEntity>(BasketMapping.Configure);
@@ -37,8 +36,6 @@ namespace WebMarket.EF.Context
         public DbSet<BasketEntity> Basket { get; set; }
 
         public DbSet<CategoryEntity> Categories { get; set; }
-
-        public DbSet<SubCategoryEntity> SubCategories { get; set; }
 
         public DbSet<ProductCharacteristicEntity> ProductCharacteristics { get; set; }
     }
