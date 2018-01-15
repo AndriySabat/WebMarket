@@ -7,18 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
-var AppModule = /** @class */ (function () {
+import { AppComponent } from './components/app/app.component';
+import { NavMenuComponent } from './components/navmenu/navmenu.component';
+//import { AppComponent } from './app.component';
+var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        NgModule({
-            imports: [BrowserModule, FormsModule],
-            declarations: [AppComponent],
-            bootstrap: [AppComponent]
-        })
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    NgModule({
+        imports: [BrowserModule, FormsModule],
+        declarations: [AppComponent, NavMenuComponent],
+        bootstrap: [AppComponent]
+    })
+], AppModule);
 export { AppModule };
 //# sourceMappingURL=app.module.js.map
