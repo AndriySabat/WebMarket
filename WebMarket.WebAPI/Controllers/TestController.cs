@@ -7,6 +7,7 @@ using WebMarket.EF.Context;
 using WebMarket.EF.Entities;
 using WebMarket.DAL.Providers;
 using WebMarket.DTO;
+using WebMarket.Services;
 
 namespace WebMarket.WebAPI.Controllers
 {
@@ -16,13 +17,13 @@ namespace WebMarket.WebAPI.Controllers
         private WebMarketDbContext context;
 
         private IProductProvider provider;
-        private ICategoryProvider categoryProvider;
+        private ICategoryService categoryService;
 
-        public TestController(WebMarketDbContext context_, IProductProvider provider_, ICategoryProvider categoryProvider_)
+        public TestController(WebMarketDbContext context_, IProductProvider provider_,  ICategoryService categoryService)
         {
             this.context = context_;
             this.provider = provider_;
-            this.categoryProvider = categoryProvider_;
+            this.categoryService = categoryService;
         }
 
         // GET api/values
@@ -46,7 +47,7 @@ namespace WebMarket.WebAPI.Controllers
                 }
             };
             //var i = await categoryProvider.Add(category);
-            var list =  await categoryProvider.GetAll();
+            var list =  await categoryService.GetAll();
             return list;
         }
 
