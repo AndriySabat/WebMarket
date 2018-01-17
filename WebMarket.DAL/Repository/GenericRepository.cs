@@ -57,7 +57,7 @@ namespace WebMarket.DAL.Repository
         /// Updates the specified entity.
         /// </summary>
         /// <param name="entity">The entity.</param>
-        public virtual void Update(TEntity entity)
+        public void Update(TEntity entity)
         {
             this.dbSet.Attach(entity);
             this.Context.Entry(entity).State = EntityState.Modified;

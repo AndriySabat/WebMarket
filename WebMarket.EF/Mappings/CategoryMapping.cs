@@ -18,7 +18,8 @@ namespace WebMarket.EF.Mappings
 
             builder.HasOne(s => s.ParentCategory)
                 .WithMany(c => c.SubCategories)
-                .HasForeignKey(s => s.SubCategoryId);
+                .HasForeignKey(s => s.SubCategoryId)
+                .OnDelete(DeleteBehavior.ClientSetNull);
         }
     }
 }

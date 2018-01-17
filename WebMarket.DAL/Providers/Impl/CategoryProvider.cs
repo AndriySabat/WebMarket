@@ -44,24 +44,5 @@ namespace WebMarket.DAL.Providers.Impl
                     }).ToListAsync();
             }
         }
-
-        /// <summary>
-        /// Save new category
-        /// </summary>
-        /// <param name="category"></param>
-        /// <returns>number affected rows</returns>
-        public async Task<int> Add(IList<Category> categories)
-        {
-            using (var uow = unitOfWorkFactory.CreateUnitOfWork())
-            {
-                var categoryEntities = categories.Select(item => new CategoryEntity
-                {
-                    Description = item.Description,
-                    SubCategoryId = item.SubCategoryId
-                });
-                uow.CategoryRepository.AddRange(categoryEntities);
-                return await uow.SaveChangesAsync();
-            }
-        }
     }
 }
