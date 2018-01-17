@@ -48,7 +48,7 @@ namespace WebMarket.DAL.Repository
         /// Adds the range.
         /// </summary>
         /// <param name="entities">The entities.</param>
-        public void AddRange(IList<TEntity> entities)
+        public void AddRange(IEnumerable<TEntity> entities)
         {
             this.dbSet.AddRange(entities);
         }
@@ -76,7 +76,7 @@ namespace WebMarket.DAL.Repository
         /// Removes the range.
         /// </summary>
         /// <param name="entities">The entities.</param>
-        public void RemoveRange(IList<TEntity> entities)
+        public void RemoveRange(IEnumerable<TEntity> entities)
         {
             this.dbSet.RemoveRange(entities);
         }

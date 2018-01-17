@@ -19,7 +19,7 @@ namespace WebMarket.WebAPI.Controllers
         private IProductProvider provider;
         private ICategoryService categoryService;
 
-        public TestController(WebMarketDbContext context_, IProductProvider provider_,  ICategoryService categoryService)
+        public TestController(WebMarketDbContext context_, IProductProvider provider_, ICategoryService categoryService)
         {
             this.context = context_;
             this.provider = provider_;
@@ -35,19 +35,13 @@ namespace WebMarket.WebAPI.Controllers
         [HttpGet]
         public async Task<List<Category>> Get()
         {
-            var category = new CategoryEntity
+            var category = new Category
             {
-                Description = "category_1",
-                SubCategories = new List<CategoryEntity>()
-                {
-                    new CategoryEntity
-                    {
-                        Description = "SubCategory_1"
-                    }
-                }
+                Description = "category_2",
+                SubCategoryId = 15
             };
-            //var i = await categoryProvider.Add(category);
-            var list =  await categoryService.GetAll();
+            var i = await categoryService.AddCategories(new List<Category>() { category });
+            var list = await categoryService.GetAll();
             return list;
         }
 

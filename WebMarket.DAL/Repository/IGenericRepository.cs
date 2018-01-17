@@ -9,12 +9,12 @@ namespace WebMarket.DAL.Repository
 
         void Add(TEntity entity);
 
-        void AddRange(IList<TEntity> entities);
+        void AddRange(IEnumerable<TEntity> entities);
 
         void Update(TEntity entity);
 
         void Remove(TEntity entity);
 
-        void RemoveRange(IList<TEntity> entities);
+        void RemoveRange(IEnumerable<TEntity> entities);
     }
 }

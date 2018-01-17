@@ -54,7 +54,12 @@ namespace WebMarket.DAL.Providers.Impl
         {
             using (var uow = unitOfWorkFactory.CreateUnitOfWork())
             {
-                //uow.CategoryRepository.AddRange(categories);
+                var categoryEntities = categories.Select(item => new CategoryEntity
+                {
+                    Description = item.Description,
+                    SubCategoryId = item.SubCategoryId
+                });
+                uow.CategoryRepository.AddRange(categoryEntities);
                 return await uow.SaveChangesAsync();
             }
         }
