@@ -13,5 +13,7 @@ namespace WebMarket.EF.Entities
         public virtual ICollection<CategoryEntity> SubCategories { get; set; }
 
         public virtual CategoryEntity ParentCategory { get; set; }
+
+        public virtual ICollection<ProductEntity> Products { get; set; }
     }
 }

@@ -23,8 +23,12 @@ namespace WebMarket.EF.Entities
 
         public string ManufacturedCountry { get; set; }
 
+        public long CategoryId { get; set; }
+
         public virtual ICollection<ProductCharacteristicEntity> Characteristics { get; set; }
 
         public virtual ICollection<BasketEntity> Baskets { get; set; }
+
+        public virtual CategoryEntity Category { get; set; }
     }
 }

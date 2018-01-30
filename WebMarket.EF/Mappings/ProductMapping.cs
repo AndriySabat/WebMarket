@@ -23,6 +23,10 @@ namespace WebMarket.EF.Mappings
             builder.HasMany(p => p.Baskets)
                 .WithOne(b => b.Product)
                 .HasForeignKey(p => p.ProductId);
+
+            builder.HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId);
         }
     }
 }
